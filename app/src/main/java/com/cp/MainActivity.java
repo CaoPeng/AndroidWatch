@@ -13,6 +13,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.cp.jni.JavaNative;
+
 import cp.com.aidl.IMyAidlInterface;
 import cp.com.aidl.MyAIDLService;
 
@@ -37,7 +39,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         // Example of a call to a native method
         TextView tv = (TextView) findViewById(R.id.sample_text);
-        tv.setText(stringFromJNI());
+        tv.setText(JavaNative.stringFromJNI());
         Intent intent = new Intent();
         intent.setClass(getApplicationContext(), MyAIDLService.class);
         bindService(intent,conn,Service.BIND_AUTO_CREATE);
@@ -63,7 +65,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
      * A native method that is implemented by the 'native-lib' native library,
      * which is packaged with this application.
      */
-    public native String stringFromJNI();
+    //public native String stringFromJNI();
 
     @Override
     public void onClick(View v) {
