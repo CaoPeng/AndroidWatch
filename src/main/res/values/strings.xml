@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Mobile_Wear</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+    <string name="notification_test">This is a Notification Test</string>
+    <string name="channel_name">This is Chanell name</string>
+    <string name="channel_description">This is Channel Description</string>
+</resources>
